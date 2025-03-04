@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rice Type Classifier</title>
+</head>
+<body>
+    <h2>Upload an Image of Rice Grain</h2>
+    <form action="/" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if image %}
+        <h3>Predicted Rice Type: {{ result }}</h3>
+        <img src="{{ image }}" alt="Uploaded Image" width="300">
+    {% endif %}
+</body>
+</html>
